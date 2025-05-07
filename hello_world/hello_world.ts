@@ -13,7 +13,7 @@ let num:number = 2;
 let bool:boolean=true;
 let null_val:null=null;
 let undefined_val:undefined=undefined;
-let mysymbol:symbol=Symbol("Hi");
+const mysymbol:symbol=Symbol("Hi");
 console.log(mysymbol);
 // let headings=document.querySelector("h1");
 // headings?.appendChild
