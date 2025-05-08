@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title></title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    #div_drag {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <div id="div_drag" draggable="true"></div>
+  <script>
+    const ele = document.getElementById("div_drag");
+
+    let offsetX = 0;
+    let offsetY = 0;
+
+    ele.addEventListener("dragstart", (e) => {
+     
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+      e.dataTransfer.setData("text/plain", "dragging");
+    });
+
+   
+    window.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+
+    window.addEventListener("drop", (e) => {
+      e.preventDefault();
+      
+      const x = e.clientX - offsetX;
+      const y = e.clientY - offsetY;
+
+     
+      ele.style.left = `${x}px`;
+      ele.style.top = `${y}px`;
+    });
+   
+    class ex{
+      
+        static name;
+        constructor(){
+            Object.defineProperty(this, name,{
+                value:"shwetha",
+                writable:false,
+                configurable:false,
+            });
+        }
+        sayHello(){
+            const name="shwetha";
+        }
+    }
+  </script>
+</body>
+</html>

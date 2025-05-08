@@ -72,9 +72,10 @@ enum enum_const{
     undefined,
 }
 enum enum_defined{
-    name="shwetha",
-    marks=2,
+    name="shwetha",//no reverse mapping 
+    marks=2,//there is reverse mapping
 }
 console.log(enum_defined);
 console.log(enum_const);
 console.log(enum_var);//bidirectional mapping//use in Calender
+let sym:symbol=Symbol()
