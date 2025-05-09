@@ -5,7 +5,7 @@ ele.addEventListener("dragstart", (e) => {
 });
 
 window.addEventListener("dragover", (e) => {
-  e.preventDefault(); // Allow dropping
+  e.preventDefault(); 
 });
 
 window.addEventListener("drop", (e) => {
